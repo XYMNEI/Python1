@@ -1,0 +1,29 @@
+# 开发时间：2022/7/26  17:31
+# print函数可直接使用
+#输出到控制台（显示器）
+# 可输出数字
+print(520)
+print(55.1)
+
+#可输出字符串
+print('helloworld')
+print("helloworld")
+
+#可输出含有运算符的表达式
+print(3+1)
+
+
+#数据输出到文件中【注意点：1所指定的盘要存在，2.要使用file=文件对象名（fp）】
+#fp=open('D:/text.txt','a+')
+#print('helloworld',fp)
+#fp.close()
+#a+表示在地址中寻找该文件如果有就打开，如果没有就新建
+#该段代码在打印出来的TXT中无法显示出来
+#改为
+fp=open('D:/text.txt','a+')
+print('helloworld',file=fp)
+fp.close()
+#运行一次文件中就会多输出一次
+
+#不进行换行输出，输出内容全在一行
+print('hello','world','Python')
